@@ -714,7 +714,7 @@ function slideshow( slideshowname ) {
 <!--
 
 SLIDES = new slideshow("SLIDES");
-SLIDES.timeout = 3000;
+SLIDES.timeout = 5000;
 SLIDES.prefetch = -1;
 SLIDES.repeat = true;
 
@@ -776,6 +776,24 @@ s = new slide();
 s.src =  "http://zashley.us/images/slide7.jpg";
 s.text = unescape("");
 s.link = "http://zashley.us/images/slide7.jpg";
+s.target = "";
+s.attr = "";
+s.filter = "";
+SLIDES.add_slide(s);
+
+s = new slide();
+s.src =  "http://zashley.us/images/slide8.jpg";
+s.text = unescape("");
+s.link = "http://zashley.us/images/slide8.jpg";
+s.target = "";
+s.attr = "";
+s.filter = "";
+SLIDES.add_slide(s);
+
+s = new slide();
+s.src =  "http://zashley.us/images/slide9.jpg";
+s.text = unescape("");
+s.link = "http://zashley.us/images/slide9.jpg";
 s.target = "";
 s.attr = "";
 s.filter = "";
@@ -867,6 +885,16 @@ here is a non-JavaScript version of the image slideshow:
 <HR>
 <P>
 <IMG SRC="http://zashley.us/images/slide7.jpg" ALT="slideshow image"><BR>
+
+</P>
+<HR>
+<P>
+<IMG SRC="http://zashley.us/images/slide8.jpg" ALT="slideshow image"><BR>
+
+</P>
+<HR>
+<P>
+<IMG SRC="http://zashley.us/images/slide9.jpg" ALT="slideshow image"><BR>
 
 </P>
 <HR>
