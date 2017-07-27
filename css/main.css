@@ -46,6 +46,11 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+article { background-color: rgb(255,255,255); width: 420px; margin-bottom: 20px; padding-left: 10px; padding-right: 10px; margin-top: 20px;
+	#Slideshow { width: 400px; height: 400px; padding-left: 10px; }
+}	
+
 Don't forget to commit the new CSS file!
 
 
