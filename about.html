@@ -714,12 +714,21 @@ function slideshow( slideshowname ) {
 <!--
 
 SLIDES = new slideshow("SLIDES");
-SLIDES.timeout = 5000;
+SLIDES.timeout = 4000;
 SLIDES.prefetch = -1;
 SLIDES.repeat = true;
 
 s = new slide();
-s.src =  "http://zashley.us/images/slide1.jpg";
+s.src =  "http://www.zashley.us/images/slide0.jpg";
+s.text = unescape("");
+s.link = "http://zashley.us/images/slide0.jpg";
+s.target = "";
+s.attr = "";
+s.filter = "";
+SLIDES.add_slide(s);
+
+s = new slide();
+s.src =  "http://www.zashley.us/images/slide1.jpg";
 s.text = unescape("");
 s.link = "http://zashley.us/images/slide1.jpg";
 s.target = "";
@@ -728,7 +737,7 @@ s.filter = "";
 SLIDES.add_slide(s);
 
 s = new slide();
-s.src =  "http://zashley.us/images/slide2.jpg";
+s.src =  "http://www.zashley.us/images/slide2.jpg";
 s.text = unescape("");
 s.link = "http://zashley.us/images/slide2.jpg";
 s.target = "";
@@ -737,7 +746,7 @@ s.filter = "";
 SLIDES.add_slide(s);
 
 s = new slide();
-s.src =  "http://zashley.us/images/slide3.jpg";
+s.src =  "http://www.zashley.us/images/slide3.jpg";
 s.text = unescape("");
 s.link = "http://zashley.us/images/slide3.jpg";
 s.target = "";
@@ -746,7 +755,7 @@ s.filter = "";
 SLIDES.add_slide(s);
 
 s = new slide();
-s.src =  "http://zashley.us/images/slide4.jpg";
+s.src =  "http://www.zashley.us/images/slide4.jpg";
 s.text = unescape("");
 s.link = "http://zashley.us/images/slide4.jpg";
 s.target = "";
@@ -755,7 +764,7 @@ s.filter = "";
 SLIDES.add_slide(s);
 
 s = new slide();
-s.src =  "http://zashley.us/images/slide5.jpg";
+s.src =  "http://www.zashley.us/images/slide5.jpg";
 s.text = unescape("");
 s.link = "http://zashley.us/images/slide5.jpg";
 s.target = "";
@@ -764,7 +773,7 @@ s.filter = "";
 SLIDES.add_slide(s);
 
 s = new slide();
-s.src =  "http://zashley.us/images/slide6.jpg";
+s.src =  "http://www.zashley.us/images/slide6.jpg";
 s.text = unescape("");
 s.link = "http://zashley.us/images/slide6.jpg";
 s.target = "";
@@ -773,7 +782,7 @@ s.filter = "";
 SLIDES.add_slide(s);
 
 s = new slide();
-s.src =  "http://zashley.us/images/slide7.jpg";
+s.src =  "http://www.zashley.us/images/slide7.jpg";
 s.text = unescape("");
 s.link = "http://zashley.us/images/slide7.jpg";
 s.target = "";
@@ -782,7 +791,7 @@ s.filter = "";
 SLIDES.add_slide(s);
 
 s = new slide();
-s.src =  "http://zashley.us/images/slide8.jpg";
+s.src =  "http://www.zashley.us/images/slide8.jpg";
 s.text = unescape("");
 s.link = "http://zashley.us/images/slide8.jpg";
 s.target = "";
@@ -791,7 +800,7 @@ s.filter = "";
 SLIDES.add_slide(s);
 
 s = new slide();
-s.src =  "http://zashley.us/images/slide9.jpg";
+s.src =  "http://www.zashley.us/images/slide9.jpg";
 s.text = unescape("");
 s.link = "http://zashley.us/images/slide9.jpg";
 s.target = "";
@@ -833,7 +842,7 @@ if (nodivtext) {
 
 <P>
 <a href="javascript:SLIDES.hotlink()"><img name="SLIDESIMG"
-src="http://zashley.us/images/slide1.jpg" STYLE="filter:progid:DXImageTransform.Microsoft.Fade()" BORDER=0 alt="Slideshow image"></A>
+src="http://www.zashley.us/images/slide0.jpg" STYLE="filter:progid:DXImageTransform.Microsoft.Fade()" BORDER=0 alt="Slideshow image"></A>
 
 <SCRIPT type="text/javascript">
 <!--
@@ -854,47 +863,52 @@ Since your web browser does not support JavaScript,
 here is a non-JavaScript version of the image slideshow:
 <P>
 <P>
-<IMG SRC="http://zashley.us/images/slide1.jpg" ALT="slideshow image"><BR>
+<IMG SRC="http://www.zashley.us/images/slide0.jpg" ALT="slideshow image"><BR>
 
 </P>
 <HR>
 <P>
-<IMG SRC="http://zashley.us/images/slide2.jpg" ALT="slideshow image"><BR>
+<IMG SRC="http://www.zashley.us/images/slide1.jpg" ALT="slideshow image"><BR>
 
 </P>
 <HR>
 <P>
-<IMG SRC="http://zashley.us/images/slide3.jpg" ALT="slideshow image"><BR>
+<IMG SRC="http://www.zashley.us/images/slide2.jpg" ALT="slideshow image"><BR>
 
 </P>
 <HR>
 <P>
-<IMG SRC="http://zashley.us/images/slide4.jpg" ALT="slideshow image"><BR>
+<IMG SRC="http://www.zashley.us/images/slide3.jpg" ALT="slideshow image"><BR>
 
 </P>
 <HR>
 <P>
-<IMG SRC="http://zashley.us/images/slide5.jpg" ALT="slideshow image"><BR>
+<IMG SRC="http://www.zashley.us/images/slide4.jpg" ALT="slideshow image"><BR>
 
 </P>
 <HR>
 <P>
-<IMG SRC="http://zashley.us/images/slide6.jpg" ALT="slideshow image"><BR>
+<IMG SRC="http://www.zashley.us/images/slide5.jpg" ALT="slideshow image"><BR>
 
 </P>
 <HR>
 <P>
-<IMG SRC="http://zashley.us/images/slide7.jpg" ALT="slideshow image"><BR>
+<IMG SRC="http://www.zashley.us/images/slide6.jpg" ALT="slideshow image"><BR>
 
 </P>
 <HR>
 <P>
-<IMG SRC="http://zashley.us/images/slide8.jpg" ALT="slideshow image"><BR>
+<IMG SRC="http://www.zashley.us/images/slide7.jpg" ALT="slideshow image"><BR>
 
 </P>
 <HR>
 <P>
-<IMG SRC="http://zashley.us/images/slide9.jpg" ALT="slideshow image"><BR>
+<IMG SRC="http://www.zashley.us/images/slide8.jpg" ALT="slideshow image"><BR>
+
+</P>
+<HR>
+<P>
+<IMG SRC="http://www.zashley.us/images/slide9.jpg" ALT="slideshow image"><BR>
 
 </P>
 <HR>
