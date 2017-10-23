@@ -39,6 +39,12 @@ footer {
     font-size: .8em;
 }
 
+menutop ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 ul.posts { 
     padding: 0px;
     margin: 20px auto 40px; 
