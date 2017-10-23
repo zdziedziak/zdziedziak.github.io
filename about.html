@@ -4,14 +4,14 @@ title: About Us
 ---
 <div class="blurb">
 	<h1 align="center">About Us</h1>
-  
+
   <p align="center"><strong>UNDER CONSTRUCTION</strong></p>
-  
+
 <br>
 	<br>
-	
+
 	<div style="text-align:center"; >
-	
+
 	<SCRIPT TYPE="text/javascript">
 <!--
 
@@ -108,7 +108,7 @@ function slide(src,link,text,target,attr) {
       // use them to open the new window
       if (this.attr) {
         mywindow = window.open(this.link, this.target, this.attr);
-  
+
       } else {
         // If window attributes are not specified, do not use them
         // (this will copy the attributes from the originating window)
@@ -187,9 +187,9 @@ function slideshow( slideshowname ) {
     // Add a slide to the slideshow.
     // For example:
     // SLIDES1.add_slide(new slide("s1.jpg", "link.html"))
-  
+
     var i = this.slides.length;
-  
+
     // Prefetch the slide image if necessary
     if (this.prefetch == -1) {
       slide.load();
@@ -203,16 +203,16 @@ function slideshow( slideshowname ) {
     // This method implements the automatically running slideshow.
     // If you specify the "timeout" argument, then a new default
     // timeout will be set for the slideshow.
-  
+
     // Make sure we're not already playing
     this.pause();
-  
+
     // If the timeout argument was specified (optional)
     // then make it the new default
     if (timeout) {
       this.timeout = timeout;
     }
-  
+
     // If the current slide has a custom timeout, use it;
     // otherwise use the default timeout
     if (typeof this.slides[ this.current ].timeout != 'undefined') {
@@ -228,7 +228,7 @@ function slideshow( slideshowname ) {
   //--------------------------------------------------
   this.pause = function() {
     // This method stops the slideshow if it is automatically running.
-  
+
     if (this.timeoutid != 0) {
 
       clearTimeout(this.timeoutid);
@@ -243,7 +243,7 @@ function slideshow( slideshowname ) {
 
     // Make sure the slideshow has been initialized correctly
     if (! this.valid_image()) { return; }
-  
+
     // Call the pre-update hook function if one was specified
     if (typeof this.pre_update_hook == 'function') {
       this.pre_update_hook();
@@ -264,7 +264,7 @@ function slideshow( slideshowname ) {
 
     // Load the slide image if necessary
     slide.load();
-  
+
     // Apply the filters for the image transition
     if (dofilter) {
 
@@ -333,15 +333,15 @@ function slideshow( slideshowname ) {
     // onClick="myslides.goto_slide(0)"
     // onClick="myslides.goto_slide(-1)"
     // onClick="myslides.goto_slide(5)"
-  
+
     if (n == -1) {
       n = this.slides.length - 1;
     }
-  
+
     if (n < this.slides.length && n >= 0) {
       this.current = n;
     }
-  
+
     this.update();
   }
 
@@ -351,7 +351,7 @@ function slideshow( slideshowname ) {
     // Picks a random slide (other than the current slide) and
     // displays it.
     // If the include_current parameter is true,
-    // then 
+    // then
     // See also: shuffle()
 
     var i;
@@ -364,7 +364,7 @@ function slideshow( slideshowname ) {
       do {
         i = Math.floor(Math.random()*this.slides.length);
       } while (i == this.current);
- 
+
       // Display the slide
       this.goto_slide(i);
     }
@@ -389,14 +389,14 @@ function slideshow( slideshowname ) {
   //--------------------------------------------------
   this.previous = function() {
     // This method goes to the previous slide.
-  
+
     // Decrement the image number
     if (this.current > 0) {
       this.current--;
     } else if (this.repeat) {
       this.current = this.slides.length - 1;
     }
-  
+
     this.update();
   }
 
@@ -450,7 +450,7 @@ function slideshow( slideshowname ) {
   //--------------------------------------------------
   this.get_text = function() {
     // This method returns the text of the current slide
-  
+
     return(this.slides[ this.current ].text);
   }
 
@@ -464,20 +464,20 @@ function slideshow( slideshowname ) {
     // document.write("<ul>");
     // document.write(s.get_all_text("<li>","\n"));
     // document.write("<\/ul>");
-  
+
     all_text = "";
-  
+
     // Loop through all the slides in the slideshow
     for (i=0; i < this.slides.length; i++) {
-  
+
       slide = this.slides[i];
-    
+
       if (slide.text) {
         all_text += before_slide + slide.text + after_slide;
       }
-  
+
     }
-  
+
     return(all_text);
   }
 
@@ -485,13 +485,13 @@ function slideshow( slideshowname ) {
   //--------------------------------------------------
   this.display_text = function(text) {
     // Display the text for the current slide
-  
+
     // If the "text" arg was not supplied (usually it isn't),
     // get the text from the slideshow
     if (!text) {
       text = this.slides[ this.current ].text;
     }
-  
+
     // If a textarea has been specified,
     // then change the text displayed in it
     if (this.textarea && typeof this.textarea.value != 'undefined') {
@@ -515,7 +515,7 @@ function slideshow( slideshowname ) {
   //--------------------------------------------------
   this.hotlink = function() {
     // This method calls the hotlink() method for the current slide.
-  
+
     this.slides[ this.current ].hotlink();
   }
 
@@ -525,11 +525,11 @@ function slideshow( slideshowname ) {
     // Saves the position of the slideshow in a cookie,
     // so when you return to this page, the position in the slideshow
     // won't be lost.
-  
+
     if (!cookiename) {
       cookiename = this.name + '_slideshow';
     }
-  
+
     document.cookie = cookiename + '=' + this.current;
   }
 
@@ -538,19 +538,19 @@ function slideshow( slideshowname ) {
   this.restore_position = function(cookiename) {
   // If you previously called slideshow_save_position(),
   // returns the slideshow to the previous state.
-  
+
     //Get cookie code by Shelley Powers
-  
+
     if (!cookiename) {
       cookiename = this.name + '_slideshow';
     }
-  
+
     var search = cookiename + "=";
-  
+
     if (document.cookie.length > 0) {
       offset = document.cookie.indexOf(search);
       // if cookie exists
-      if (offset != -1) { 
+      if (offset != -1) {
         offset += search.length;
         // set index of beginning of value
         end = document.cookie.indexOf(";", offset);
@@ -571,38 +571,38 @@ function slideshow( slideshowname ) {
     // give non-javascript browsers access to your slideshow information.
     // This also ensures that your slideshow text and images are indexed
     // by search engines.
-  
+
     $html = "\n";
-  
+
     // Loop through all the slides in the slideshow
     for (i=0; i < this.slides.length; i++) {
-  
+
       slide = this.slides[i];
-  
+
       $html += '<P>';
-  
+
       if (slide.link) {
         $html += '<a href="' + slide.link + '">';
       }
-  
+
       $html += '<img src="' + slide.src + '" ALT="slideshow image">';
-  
+
       if (slide.link) {
         $html += "<\/a>";
       }
-  
+
       if (slide.text) {
         $html += "<BR>\n" + slide.text;
       }
-  
+
       $html += "<\/P>" + "\n\n";
     }
-  
+
     // Make the HTML browser-safe
     $html = $html.replace(/\&/g, "&amp;" );
     $html = $html.replace(/</g, "&lt;" );
     $html = $html.replace(/>/g, "&gt;" );
-  
+
     return('<pre>' + $html + '</pre>');
   }
 
@@ -628,7 +628,7 @@ function slideshow( slideshowname ) {
     } else { // we're at the last slide
       this.next();
     }
-    
+
     // Keep playing the slideshow
     this.play( );
   }
@@ -637,7 +637,7 @@ function slideshow( slideshowname ) {
   //--------------------------------------------------
   this.valid_image = function() {
     // Returns 1 if a valid image has been set for the slideshow
-  
+
     if (!this.image)
     {
       return false;
@@ -663,7 +663,7 @@ function slideshow( slideshowname ) {
       return undefined;
     }
   }
-  
+
 
   //==================================================
   // Deprecated methods
@@ -915,23 +915,106 @@ here is a non-JavaScript version of the image slideshow:
 
 </NOSCRIPT>
 
-	
+
 	</div>
-	     
-	     
-	
-	
+
+
+
+
 	<div align="center"><p>We will insert something witty/funny about us.  But if you are already visiting this site, you probably already know the basics...</p><div>
 
- 
+
 
   <div align="center"><p>Our story in a nutshell: We met, we dated, he proposed, Herman came too</p><div>
-	
-	
+
+
 	<div align="center"><img src="images/herman-came.jpg" alt="header image" class="templatemo-header-img img-responsive cleaner" align="absmiddle">
 		  </div>
    <div align="center"><p>Yes, that is a picture of Herman.  Yes, this photo was taken mere minutes after the proposal.  There may or may not be a ring in this picture</p><div>
 
+<div align="center"><h1>About Us Quiz</h1><div>
 
+<div align="center"><p>In 2003, both Ashley and Zach were in Middlebury College in Vermont, yet a few short weeks separated their time there. (Zach attending the German Summer Language Program and Ashley beginning her Freshman year)  It took almost 10 years later, in 2012, for Ashley and Zach to actually meet. As soon as their courtship began, Ashley disappeared to Sierra Leone for three months. When she returned, Zach had grown a beard and Herman had put on 15 pounds. They continued their romance by mutually torturing Herman with long hikes, weekend camping adventures, and running a few half marathons “for fun.” Despite her graduating and moving to Timor-Leste for a year, Zach never got the hint and kept at it.  In 2015, Zach and Ashley moved into together with Herman, the three Milvia roommates, countless lizards, traveling hippies and an opossum named Lucy. On a perfect Californian day (which is not saying much because everyday is perfect in California), Zach took Ashley on a hike in the bluffs near Carmel. He got down on one knee and Ashley said “of course!” Herman came too.</p><div>
+
+<ul>What's true???
+<li>Ashley explains to Zach that if he keeps planning dates, they need to involve food or she needs to be told explicitly that there will be no food so she can plan accordingly.<li>
+<li>They say "I love you."
+<li>Ashley and Zach go on their first international trip as a couple to Bosnia, Montenegro and Croatia. They quickly learn that GPS was invented to prevent couples from killing each other on international vacations.
+<li>Zach moves in with Ashley, Herman, the three Milvia Roommates, countless lizards and one opossum named "Lucy."
+<li>Zach proposes to Ashley during a hike in Carmel. She says yes. In that order. Herman came too.
+</ul>
+
+<ol>On their third date, Ashley had to explain what to Zach:
+<li>That Herman just looks husky, but he is in fact big-boned.
+<li>That she is actually an internationally renowned darts player, and therefore can never play him in darts because she would crush him too hard.
+<li> That if he keeps planning their dates, they need to involve food or she needs adequate notice of no food so she can plan accordingly.
+</ol>
+
+<ol>In 2012, Ashley teaches Zach how to ski in the mountains of Tahoe. What happens during his first ski season?
+<li>Zach learns how to do a flip and high five Ashley mid-air and then land like a pro.
+<li> Ashley ends up challenging Lindsey Vonn, Mikaela Shiffrin and Julia Mancuso to a drinking contest and wins.
+<li>Ashley tries to teach Zach how to ski on ice, and Zach decides that he does not like skiing on ice.
+</ol>
+
+<ol>How did Zach respond to Ashley’s warning that learning to ski was hard?
+<li> He was so terrified of being heckled by Ashley his knees wouldn’t stop shaking the first day.
+<li>Pretended he didn’t know how to ski so Ashley could "teach" him.
+<li> Explained that he shouldn’t have too much trouble skiing because he knew how to skate and skateboard. Ashley then laughed for a solid three minutes.
+</ol>
+
+<ol> In 2013, Ashley and Zach go on their first international trip as a couple to Bosnia, Montenegro and Croatia. They quickly learn that:
+<li>Zach hates all of the Bosnian meat dishes and ends up losing weight on the trip.
+<li>That Zach's old passport photos still look exactly like him and they pass through every international border without comment or notice.
+<li> That GPS was invented to prevent couples from killing each other on international vacations, especially in Montenegro when all the streets in the same village have the same name.
+</ol>
+
+<ol>In 2015, Zach moves into 2605 Milvia. Who was NEVER a resident at this esteemed household?
+<li>An opossum named Lucy.
+<li>An ex-marine turned traveling hippie would often stop by for a fresh shower and a warm place to sleep.
+<li>Karen, a woman whose entire possessions consisted of one bag of clothes and two bowling balls.
+<li>The Dalai Lama
+</ol>
+
+<ol>Zach proposed to Ashley on a hike in the bluffs near Carmel. What is true of the proposal?
+<li>Zach hired a photographer to document the event, and a string quartet played after Ashley said yes. Then some ninjas showed up and Zach karate chopped them.
+<li>A seagull swooped down and tried to steal the ring, leading Ashley to fight the seagull. It ended with Zach karate chopping the seagull.
+<li>Herman came too.
+</ol>
+
+<ul>Quick Facts:
+  <li>Number of countries visited: 8
+(Montenegro, Bosnia, Croatia, France, Indonesia, Canada, Switzerland, and England)
+<li>Number of National Parks visited: 4
+<li>Pair of Toms shoes Zach asked Ashley to throw out bc they had turned into “a biohazard.” (Note- Ashley only threw them out after they ceased to function as shoes): 12 pairs
+<li>Unique types of cheese consumed during relationship: 1,792
+<li>Horror movies watched while wedding planning: 7
+<li>Celebrity names: 1 (Zashley)
+</ul>
+
+<h2>Meet the Wedding Party!:</h2>
+<p>Ashley and Zach: the couple</p>
+<p>Ashley: Lover of life, cheese, and making nests out of blankets (in that order)>/p>
+<p>Zach: Lover of meat, beer, and beer and meat (in that order)</p>
+
+
+<ul>Best Ladies/ Bride’s Life Partners/ Marital Squires
+<br>
+<li>Kathryn Babin McDermott (Babin): College roommate, first husband. Usually on a canoe in an exotic foreign land called “Canada.” Human of honor.
+<li>Kate Brinkley-Talley (Brinkley): Friend from elementary school on up. Wears birkenstocks and bright red lipstick. Is totally over that time Ashley beat her in the 3rd grade spelling bee. Once walked an apple on a leash, which is not a joke or metaphor or anything. She really did that.
+<li>Dr. Christine Neeb (Neebs): College friend and dormmate. Huge Icelandaphile. Speaks german fluently enough to declare her love of Torte. Despite the fact that she dislikes cheese, has remained friends with Ashley after all of these years.
+<li>Prithi Trivedi (Prithi): Friend from grad school. Lover of french pastries and good cheeses. Avid enthusiast. Has traveled to three continents with Ashley (more if you count all the countries they saw during “It’s a Small World,”), and is also the only best lady who is called by her actual first name.
+</ul>
+
+<br>
+<br>
+<br>
+
+<ul>Groomsmen:
+  <br>
+  <li>Justin: Linguist and quintessential Californian.  Can articulate the morphology of the word bro.  Zach and Justin met on the first day of New Grad Student Orientation, and thus is Zach’s oldest Berkeley friend.  Consummate connoisseur of axes and flannel.  Founding member of Viggo Mortensen Fan Club.  Always up for a night of shenanigans if beer is involved.  Contemplator of potential zombie apocalypses.  Justin and Zach toured Russia for Spring Break, enchanting the local people and drinking all the Три Медведя the country had to offer and managed to avoid apprehension by the authorities.  He has also been known to occasionally mention his love of Nirvana.  Or was that Sound Garden?
+  <li>Eric: Eric often exposes his New Jersey roots by his constant loud and aggressive behavior.  Eric and Zach met in the German Literature PhD program at Berkeley.  Eric and Zach have shared many years taking classes, teaching and researching in the glorious halls of Dwinelle.  Zach and Eric like to get some beers and spend an evening debating various academic and/or political topics.
+  <li>Trevor: A Francophile with Appalachian flair.  Zach and Trevor met when Trevor became the newest housemate on Jefferson Avenue.  Zach’s long, unkempt hair at the time initially made Trevor think that he had found a political ally, but that was soon discovered to be a ruse.  However, Trevor and Zach have, and continue to have, friendly political discussions over beers.  Despite hailing from the French Literature Department, Trevor has taken several classes along with Zach – German Idealism is their common academic link.  Trevor also was a student of Zach’s for a German Grammar class.  Genosse Frosch, you handled the course with aplomb!
+  <li>Matthew Jayjack and Daniel Dziedziak: Zach’s older brothers.  He feels like he has known them his entire life.  It’s safe to say that their reputations precede them.
+  </ul>
 
 </div><!-- /.blurb -->
