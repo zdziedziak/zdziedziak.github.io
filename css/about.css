@@ -40,6 +40,7 @@ footer {
 }
 
 ul.posts { 
+    padding: 0px;
     margin: 20px auto 40px; 
     font-family: 'Lato', sans-serif;
     font-size: 1.5em;
@@ -47,6 +48,7 @@ ul.posts {
 }
 
 ul.posts li {
+    padding: 0px;
     list-style: none;
     font-family: 'Lato', sans-serif;
     text-align: left;
