@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+    margin: 60px auto;
+    width: 70%;
+}
+nav ul, footer ul {
+    font-family: 'Lato', sans-serif;
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+    text-align: center;
+}
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: #999;
+}
+a:hover {
+    text-decoration: underline; color: #000000;
+}
+h1 {
+    font-size: 3em;
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;    
+    line-height: 1.4em;
+    color: #333;
+}
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+    text-align: left;
+}
+
+ul.posts li {
+    list-style: none;
+    text-align: left;
+}
+
+article { background-color: rgb(255,255,255); width: 420px; margin-bottom: 20px; padding-left: 10px; padding-right: 10px; margin-top: 20px; }
+
+
+.slideshow { width: 400px; height: 400px; padding-left: 10px; margin:0 auto; }
+	
+
+Don't forget to commit the new CSS file!
+
+
+6 Link to your CSS file inside your HTML document's <head>. Go back to index.html and select the "Edit" button.
+
+
+Add a link to main.css (new markup is in bold):
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zach and Ashley's Wedding Website</title>
+		<!-- link to main stylesheet -->
