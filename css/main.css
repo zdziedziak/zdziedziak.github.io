@@ -35,12 +35,12 @@ h2 {
 h4 {
     font-size: 1.2em;
     font-family: 'Lato', sans-serif;
-     
+
 }
 
 p {
     font-size: 1em;
-    font-family: 'Lato', sans-serif;    
+    font-family: 'Lato', sans-serif;
     line-height: 1.4em;
     color: #333;
 }
@@ -49,8 +49,8 @@ footer {
     font-size: .8em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
+ul.posts {
+    margin: 20px auto 40px;
     font-size: 1.5em;
 }
 
@@ -62,7 +62,19 @@ article { background-color: rgb(255,255,255); width: 420px; margin-bottom: 20px;
 
 
 .slideshow { width: 400px; height: 400px; padding-left: 10px; margin:0 auto; }
-	
+
+.gallery{
+	margin: 10px 50px;
+}
+.gallery img{
+	width: 300px;
+	padding: 5px;
+	transition: 1s;
+}
+	.gallery img:hover{
+		transform: scale (1.1);
+
+}
 
 Don't forget to commit the new CSS file!
 
